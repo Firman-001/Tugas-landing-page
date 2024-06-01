@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Header from './header/header';
+import Footer  from './footer/footer';
+import 'flowbite/dist/flowbite.css';
+import Home from './home';
+import ProfileSekolah from './profile/profileSekolah';
+import FormPendaftaran from './ppdb/ppdb';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Kemitraan from './kenmitraan/kemitraan';
+
+
+class Apps extends React.Component {
+  render() {
+    return (
+      <div className="bg-gray-100 min-h-screen">
+        < Header/>
+        < Home/>
+        < ProfileSekolah/>
+        <Kemitraan/>
+        <FormPendaftaran/>
+        < Footer/>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Apps;
